@@ -1,4 +1,4 @@
-package ch01;
+package connectivity;
 
 public class QuickUnion {
 	

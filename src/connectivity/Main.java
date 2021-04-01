@@ -1,4 +1,5 @@
-package ch01;
+// to test the result
+package connectivity;
 
 public class Main {
 	public static void main(String[] args) {

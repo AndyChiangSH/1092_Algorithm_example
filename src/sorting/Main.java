@@ -5,13 +5,14 @@ public class Main
 {
 	public static void main(String[] args) 
 	{
-		Data[] arr = new Data[10];
-		int[] data = {5, 1, 2, 8, 3, 10, 15, 8, 7, 20};
-		for(int i = 0; i < 10; i++)
+		int[] data = {5, 1, 2, 8, 3, 10, 15, 8, 7, 20, -1, -10, 11, 25, 0};
+		Data[] arr = new Data[data.length];
+		
+		for(int i = 0; i < data.length; i++)
 		{
 			arr[i] = new Data(data[i]);
 		}
-		new Selection().sort(arr);
+		new Insertion().sort(arr);
 		show(arr);
 	}
 	

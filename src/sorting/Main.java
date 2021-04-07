@@ -5,14 +5,14 @@ public class Main
 {
 	public static void main(String[] args) 
 	{
-		int[] data = {5, 1, 2, 8, -1, 10, 15, 8, 7, 20, 3, -10, 11, 25, 0};
+		int[] data = {8, 1, 2, 8, -1, 10, 15, 8, 7, 20, 3, -10, 11, 25, 0, 8, 10, -5, 8, 33, -29, 50, 6, 5};
 		Data[] arr = new Data[data.length];
 		
 		for(int i = 0; i < data.length; i++)
 		{
 			arr[i] = new Data(data[i]);
 		}
-		new Merge().sort(arr);
+		new ThreeWayPartition().sort(arr);
 		show(arr);
 	}
 	

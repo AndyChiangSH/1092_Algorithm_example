@@ -1,5 +1,8 @@
 # 演算法 - sorting
 
+[![hackmd-github-sync-badge](https://hackmd.io/5BN-gyxWSGuTZkmGKw_epg/badge)](https://hackmd.io/5BN-gyxWSGuTZkmGKw_epg)
+
+
 ###### tags: `演算法`
 
 ## Selection Sort

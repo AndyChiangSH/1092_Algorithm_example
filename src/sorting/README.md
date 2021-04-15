@@ -2,7 +2,6 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/5BN-gyxWSGuTZkmGKw_epg/badge)](https://hackmd.io/5BN-gyxWSGuTZkmGKw_epg)
 
-
 ###### tags: `演算法`
 
 ## Selection Sort
@@ -86,7 +85,59 @@ worst case: 排好的陣列 or 全部相同值
 
 
 
+
+## Quick select
+Quick sort的變形，可以在未排序的陣列中搜尋指定值，時間複雜度為O(2N)。
+
+
+
+## Compare-based lower bound for sorting
+一個基於比較的排序演算法，因為兩兩間都要比較，會形成一個類似樹的形狀，因此時間複雜度最低不可能低於O(NlogN)
+
+證明如下:
+![](https://i.imgur.com/FfnkXaN.png)
+
+
+![](https://i.imgur.com/vegYpYd.png)
+
+
+## Counting Sort
+Counting Sort會做幾個步驟:
+1. 先統計每個符號的出現次數
+2. 將出現次數累加
+3. 將這個出現次數表向右移動一格
+4. 在原陣列中，每掃到一個符號，就放置於新陣列中，對應到符號表上所記錄的位置，並將紀錄的位置+1(向右一格)
+5. 完成後將新陣列複製到原陣列就結束了!
+
+那因為值之間並沒有做比較，所以複雜度最低不是O(NlogN)。
+
+![](https://i.imgur.com/Szj8Ar8.png)
+
+
+### LSD
+從最小位元開始，一次排一個位元，因為有stable特性，所以之後的再排並不影響之前的排序。
+
+![](https://i.imgur.com/M9FJWi0.png)
+
+
+### MSD
+從最大位元開始，一次排一個位元，但排完一個位元後，不同值的元素並需分開來做，如果一條分支的元素只剩一個，會提早返回。
+
+![](https://i.imgur.com/LBBkDnf.png)
+
+
+### 效能分析
+
+![](https://i.imgur.com/40Bo5zq.png)
+
+
+這個方法適用於相同長度的字串做字典排序。
+
+因為耗費大量的記憶體空間，因此照理來說要很快，但實作上很慢。
+
 ## Sorting summary
 ![](https://i.imgur.com/hBi3rv8.png)
 
 沒有一個sorting是完美的，因此需要因地制宜。
+
+

@@ -1,9 +1,9 @@
 package sorting;
 
 public class Merge_improvement {
-	
+
 	static int CUTOFF = 32;
-	
+
 	private static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
 		for (int k = lo; k <= hi; k++)
 			aux[k] = a[k];
@@ -30,7 +30,8 @@ public class Merge_improvement {
 		int mid = lo + (hi - lo) / 2;
 		sort(a, aux, lo, mid);
 		sort(a, aux, mid + 1, hi);
-		if(!less(a[mid+1], a[mid])) return;	// when two array is already sorted, we don't need to merge then.
+		if (!less(a[mid + 1], a[mid]))
+			return; // when two array is already sorted, we don't need to merge then.
 		merge(a, aux, lo, mid, hi);
 	}
 
